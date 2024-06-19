@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="">
+ <meta name="author" content="">
+ <link rel="icon" href="./Content/images/favicon.ico">
+
+<title>W&RSETA Online-Vacancy Application</title>
+
+ <!-- Bootstrap core CSS -->
+ <link href="./Content/distr/bootstrap/bootstrap.min.css" rel="stylesheet">
+ <link href="./Content/distr/bootstrap/cheatsheet.css" rel="stylesheet">
+
+ <!-- Custom styles for this template -->
+<link href="./Content/css-custom/index.css" rel="stylesheet">
+ <!-- scripts from distr folder-->
+ <script src="./Content/distr/scrollrevealjs/scrollreveal.min.js"></script>
+ <!--<link href="./Content/css-custom/css.css" rel="stylesheet">-->
+<style>
+      @font-face {
+            font-family: poppins;
+            src: url(./Content/fonts/poppins-regular.otf);
+        }
+
+        body{
+            font-family: poppins !important;
+        }
+</style>
+</head>
+<body class="text-center">
+    <!--login form starts here-->
+    
+    <div class="row">
+        <div class="col-12">
+            <img class="mb-4 scroll-reveal-top" src="./Content/images/logo.svg" alt="logo" width="144" height="72">
+        </div> 
+    <div class="col-12">
+       
+        <div class="card mx-5">
+                <div class="card-body">
+                  <h5 class="card-title text-success">Admin sign in</h5>
+                    <form id="form1" runat="server" class="form-signin" action="./Admin/index.html" method="post">
+                        <div class="mb-3">    
+                        <label for="txtUserName" class="sr-only">User Name</label>
+                            <input ID="txtUserName" runat="server" class="form-control" placeholder="Enter Username*" type="text" required autofocus>
+                        </div>
+
+                        <div class="mb-3">   
+                        <label for="inputPassword" class="sr-only">Password</label>
+                            <input ID="txtPassword" type="password" class="form-control mb-3" placeholder="Enter Password*" required runat="server">
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <input class="form-check-input" type="checkbox" ID="checkBoxShowBeingTypedPassword" runat="server"/>
+                                <label class="form-check-label text-success" for="checkBoxShowBeingTypedPassword">
+                                    <small>Show password</small>
+                                </label>                                    
+                        </div>
+                    
+                        <div class="mb-3">
+                            <input ID="ButtonSignin" runat="server" class="btn btn-lg btn-success btn-block" type="submit" onclick="
+                            
+                            setTimeout(autoDemoLoginDetail,500);
+                            function autoDemoLoginDetail(){
+                                document.getElementById('txtUserName').value ='DemoUserName';
+                                document.getElementById('txtPassword').value ='DemoPassWord';
+                            }
+                            
+                            " Text="Sign in" data-bs-toggle="tooltip" data-bs-placement="bottom" title="press to autofill demo data than signin"/>
+                            
+                        </div>
+                   </form>
+
+
+                    <div class="">
+                        <hr />
+                            <div class="small">
+                                <a runat="server" class="text-success" href="./register.html">Register</a><span class="text-muted"> | </span>
+                                <a runat="server" class="text-danger" href="./forgotLogin.html">Forgot login details</a>    
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+                            <div class="mt-5 my-3 text-muted small">
+                                W&RSETA Online-<b>Vacancy Application</b> &copy;
+                                <asp:Label ID="Label1" runat="server" Text="Year">Year</asp:Label> &nbsp; <br> All Rights Reserved. Version #
+                            </div>
+        </div>
+    </div>
+
+        <script src="./Scripts/js-custom/script.js"></script>
+        <script src="./Scripts/bootstrap.bundle.min.js"></script>
+        <script src="./Scripts/bootstrap.js"></script>
+
+        <script src="./Scripts/cheatsheet.js"></script>
+<script>
+    $(function(){
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+    <script>
+      ScrollReveal({distance: '60px'});
+      ScrollReveal().reveal('.scroll-reveal-top', { origin: 'top' });
+      ScrollReveal().reveal('.scroll-reveal-bottom',{delay:0 ,origin:'bottom'});
+    </script>  
+</body>
+</html>
+
+

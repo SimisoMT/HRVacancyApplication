@@ -1,0 +1,14 @@
+label {
+    font-weight: 600;
+    color: #666;
+}
+
+body {
+    background: #f5f5f5 !important;
+}
+
+
+
+.page-title {
+    margin-top: 1rem;
+}

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./Content/images/favicon.ico">
+
+    <title>W&RSETA Online-Vacancy Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Content/distr/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="./Content/css-custom/register-pg.css" rel="stylesheet">
+    <!-- scripts from distr folder-->
+    <script src="./Content/distr/scrollrevealjs/scrollreveal.min.js"></script>
+    <style>
+        @font-face {
+              font-family: poppins;
+              src: url(../Content/fonts/poppins-regular.otf);
+          }
+    
+          body{
+              font-family: poppins !important;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="scroll-reveal-top row g-2">
+            <div class="col-6">
+                <img class="" src="./Content/images/logo.svg" alt="logo" width="144" height="72">
+            </div>
+            <div class="col-6">
+                <p class="m-2 text-muted small">
+                    <a runat="server" class="text-danger float-end" href="./index.html">Go Back
+                    </a>
+                </p>
+            </div>
+        </nav>
+        <form id="form1" runat="server" class="p-5">
+            <fieldset class="row g-2">
+                <div class="col-12 page-title">
+                    <h2 class="text-success px-2">Forgot Password</h2>
+                </div>
+                <legend class="text-success px-3">Provide following Information</legend>
+                <div class="col-md-6 px-3">
+                    <label for="txtIdNumber">User Name</label>
+                        <input ID="txtUserName" class="form-control" name="txtUserName" placeholder="Enter Username*" aria-label="User Name" required runat="server">
+                </div>
+                <div class="col-md-6 px-3">
+                    <label for="txtIdNumber">ID Number</label>
+                        <input ID="txtIdNumber" pattern="[0-9]{13}" class="form-control" name="txtIdNumber" placeholder="Enter ID Number*" aria-label="ID-Number" type="number" MaxLength="13" required runat="server">
+                </div>
+                <div class="col-md-6 px-3">
+                    <label for="txtEmail">Email</label>
+                        <input ID="txtEmail" class="form-control" name="txtEmail" placeholder="Enter Email*" aria-label="email" type="email" required runat="server">
+                </div>
+            </fieldset>
+
+            <div class="col-12 px-3 my-4 ">
+                <input ID="ButtonSendPasswordByEmail" runat="server" Text="Send Password By Email" class="btn btn-success" type="submit" onclick="
+                            
+                setTimeout(autoDemoLoginDetail,500);
+                function autoDemoLoginDetail(){
+                    document.getElementById('txtUserName').value ='DemoUserName';
+                    document.getElementById('txtIdNumber').value =8602120249956621;
+                    document.getElementById('txtEmail').value ='email@de.mo';
+                }
+                
+                " data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable" />
+                <button class="btn btn-success" name="clear" type="reset">Clear</button>
+            </div>
+            <p class="mt-5 mb-3 text-muted text-center small fixed-bottom">
+                W&RSETA Online-<b>Vacancy Application</b> &copy;<asp:Label ID="Label1" runat="server" Text="Year">
+                </asp:Label> - Year All Rights Reserved. Version #
+            </p>
+        </form>
+    </div>
+    <div>
+
+    </div>
+    <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Notice</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Credentials sent via your email.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./Scripts/js-custom/script.js"></script>
+      <script src="./Scripts/bootstrap.bundle.min.js"></script>
+      <script src="./Scripts/bootstrap.js"></script>
+        <script src="./Scripts/js-custom/script.js"></script>
+    <script>
+        
+        ScrollReveal({
+            distance: '60px'
+        });
+        ScrollReveal().reveal('.scroll-reveal-top', {
+            origin: 'top'
+        });
+    </script>
+</body>
+
+

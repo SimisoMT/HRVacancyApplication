@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="">
+ <meta name="author" content="">
+ <link rel="icon" href="./Content/images/favicon.ico">
+
+<title>W&RSETA Online-Vacancy Application</title>
+
+ <!-- Bootstrap core CSS -->
+ <link href="./Content/distr/bootstrap/bootstrap.min.css" rel="stylesheet">
+ <!-- Custom styles for this template -->
+ <link href="./Content/css-custom/register-pg.css" rel="stylesheet">
+ <!-- scripts from distr folder-->
+ <script src="./Content/distr/scrollrevealjs/scrollreveal.min.js"></script>
+ <style>
+    @font-face {
+          font-family: poppins;
+          src: url(../Content/fonts/poppins-regular.otf);
+      }
+
+      body{
+          font-family: poppins !important;
+      }
+</style>
+</head>
+<body>
+    <div class="container">
+    <nav class="scroll-reveal-top row g-2">
+         <div class="col-6">
+             <img class="" src="./Content/images/logo.svg" alt="logo" width="144" height="72">
+         </div>
+         <div class="col-6">
+            <p class="m-2 text-muted small">
+                <a runat="server" class="text-danger float-end" href="./index.html">Go Back</a>  
+            </p>
+         </div>
+    </nav>
+    
+    <div class="card my-5">
+     <div class="card-body">
+      <h3 class="card-title">Register New Admin</h3>
+    <form id="form1" runat="server">
+       
+     <fieldset class="row g-2">
+         <legend class="text-success px-3">Personal Details</legend>
+         <div class="col-md-6 px-3">
+             <label for="f-name">First Name</label>
+             <input class="form-control" id="fname" type="text" placeholder="Enter Name" aria-label="Name" required>
+         </div>
+         <div class="col-md-6 px-3">
+             <label for="f-surname">Surname</label>
+             <input class="form-control" id="fsurname" type="text" placeholder="Enter Surname" aria-label="Surname" required>
+         </div>
+         <div class="col-md-6 px-3">
+             <label for="f-name">ID Number</label>
+             <input class="form-control" id="idNumber" type="number" min="0" placeholder="Enter ID Number" aria-label="Name" required>
+         </div>
+         <div class="col-md-6 px-3">
+             <label for="gender">Gender</label>
+             <select class="form-select text-muted" name="gender" id="gender" required="">
+                 <option selected="" disabled="" value="">Choose Gender...</option>
+                 <option>Male</option>
+                 <option>Female</option>
+             </select>
+         </div>
+     </fieldset>
+
+     <fieldset class="row g-2 mt-2">
+         <legend class="text-success px-3">Login Details</legend>
+         <div class="col-md-6 px-3">
+             <label for="email">Email Address</label>
+             <input type="email" class="form-control" name="emailAddress" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter Email Address" required>
+         </div>
+         <div class="col-md-6 px-3">
+             <label for="password">Password</label>
+             <input class="form-control password" type="password" " name="Password" id="Password" placeholder="Enter Password"
+                    aria-label="Password" required>
+         </div>
+         <div class="col-md-6 px-3">
+             <label for="password">Confirm Password</label>
+             <input class="form-control password" type="password" name="confirmPassword" id="confirmPassword" placeholder="Retype Password"
+                    aria-label="confirmPassword" required>
+         </div>
+
+         <div class="col-12 px-3">
+            <div class="mb-3 text-start">
+                <input class="form-check-input" type="checkbox" ID="checkBoxShowBeingTypedPassword" runat="server"/>
+                    <label class="form-check-label text-success" for="checkBoxShowBeingTypedPassword">
+                        <small>Show password</small>
+                    </label>                                    
+            </div>
+         </div>
+
+     </fieldset>
+
+     <div class="col-12 px-3 my-4 ">
+         <input class="btn btn-success" name="submit" type="submit"
+         onclick=" setTimeout(autoDemoLoginDetail,500);
+                            function autoDemoLoginDetail(){
+                                document.getElementById('fname').value ='DemoUserName';
+                                document.getElementById('fsurname').value ='DemoUserLastName';
+                                document.getElementById('idNumber').value =8602120249956621;
+                            
+                                document.getElementById('emailAddress').value ='email@de.mo';
+                                document.getElementById('Password').value ='Pas5word!';
+                                document.getElementById('confirmPassword').value ='Pas5word!';
+           
+
+                            }
+                            
+          "
+         value="Register" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable"/>
+         <button class="btn btn-success" name="clear" type="reset">Clear</button>
+     </div>
+
+        </div>
+            </div>
+     <p class="mt-5 mb-3 text-muted text-center small">
+         W&RSETA Online-<b>Vacancy Application</b> &copy;<asp:Label ID="Label1" runat="server" Text="Year"></asp:Label> - Year All Rights Reserved. Version #
+     </p>
+    </form>
+    </div>
+    <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Registration successfull</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Your registration wil go through validation & confirmation proccess. </p>
+              <p>Admin will contact you with your account credentials if process is passed.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./Scripts/js-custom/script.js"></script>
+      <script src="./Scripts/bootstrap.bundle.min.js"></script>
+      <script src="./Scripts/bootstrap.js"></script>
+        <script src="./Scripts/js-custom/script.js"></script>
+        <script>
+      ScrollReveal({distance: '60px'});
+      ScrollReveal().reveal('.scroll-reveal-top', { origin: 'top' });
+        </script>  
+</body>
+</html>
+
