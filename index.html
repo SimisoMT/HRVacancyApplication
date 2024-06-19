@@ -42,7 +42,7 @@
         <div class="card mx-5">
                 <div class="card-body">
                   <h5 class="card-title text-success">Admin sign in</h5>
-                    <form id="form1" runat="server" class="form-signin" action="./Admin/index.html" method="post">
+                    <form id="form1" runat="server" class="form-signin">
                         <div class="mb-3">    
                         <label for="txtUserName" class="sr-only">User Name</label>
                             <input ID="txtUserName" runat="server" class="form-control" placeholder="Enter Username*" type="text" required autofocus>
@@ -61,7 +61,7 @@
                         </div>
                     
                         <div class="mb-3">
-                            <input ID="ButtonSignin" runat="server" class="btn btn-lg btn-success btn-block" type="submit" onclick="
+                            <a href="./Admin/index.html"><input ID="ButtonSignin" runat="server" class="btn btn-lg btn-success btn-block" type="button" onclick="
                             
                             setTimeout(autoDemoLoginDetail,500);
                             function autoDemoLoginDetail(){
@@ -69,7 +69,7 @@
                                 document.getElementById('txtPassword').value ='DemoPassWord';
                             }
                             
-                            " Text="Sign in" data-bs-toggle="tooltip" data-bs-placement="bottom" title="press to autofill demo data than signin"/>
+                            " Text="Sign in" data-bs-toggle="tooltip" data-bs-placement="bottom" title="press to autofill demo data than signin"/></a>
                             
                         </div>
                    </form>
